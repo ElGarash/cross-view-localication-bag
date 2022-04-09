@@ -29,8 +29,14 @@ def download_dsm():
 
 
 def download_siam_fca_net():
-    gdown.download(id="11D3xEgwcnx3pe6Ipy2SAwZ1Vu4tv67LY")
-    gdown.download(id="1qC39of4UMexg6WxfV2aQLg44avwDrvqx")
+    gdown.download(
+        id="11D3xEgwcnx3pe6Ipy2SAwZ1Vu4tv67LY",
+        output=f"{SiamFCANet_DIR}/SFCANet_18.pth",
+    )
+    gdown.download(
+        id="1qC39of4UMexg6WxfV2aQLg44avwDrvqx",
+        output=f"{SiamFCANet_DIR}/SFCANet_18_VH.pth",
+    )
 
 
 def download_l2ltr():
