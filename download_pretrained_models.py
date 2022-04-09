@@ -37,7 +37,7 @@ def download_l2ltr():
     archive_path = "/kaggle/EgoTR_model.zip"
     gdown.download(id="1IOiElf_8-9Dq7n8vTAOi3kq8QAriFAjp", output=archive_path)
 
-    with zipfile.ZipExtFile(archive_path, "r") as f:
+    with zipfile.ZipFile(archive_path, "r") as f:
         f.extractall(L2LTR_DIR)
 
     os.remove(archive_path)
