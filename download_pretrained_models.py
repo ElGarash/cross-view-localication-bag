@@ -1,14 +1,14 @@
-import zipfile
-import os
 from multiprocessing import Process
+import os
+import zipfile
 
 import gdown
 
 
 MODLES_DIR = "/kaggle/working/models"
 DSM_DIR = f"{MODLES_DIR}/DSM"
-SiamFCANet_DIR = f"{MODLES_DIR}/Siam-FCANet"
 L2LTR_DIR = f"{MODLES_DIR}/L2LTR"
+SiamFCANet_DIR = f"{MODLES_DIR}/Siam-FCANet"
 
 
 def create_models_dirs():
