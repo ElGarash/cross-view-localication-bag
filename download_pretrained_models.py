@@ -12,10 +12,10 @@ SiamFCANet_DIR = f"{MODELS_DIR}/Siam-FCANet"
 
 
 def create_models_dirs():
-    os.mkdir(MODELS_DIR)
-    os.mkdir(DSM_DIR)
-    os.mkdir(SiamFCANet_DIR)
-    os.mkdir(L2LTR_DIR)
+    os.makedirs(MODELS_DIR, exist_ok=True)
+    os.makedirs(DSM_DIR, exist_ok=True)
+    os.makedirs(SiamFCANet_DIR, exist_ok=True)
+    os.makedirs(L2LTR_DIR, exist_ok=True)
 
 
 def download_dsm():
