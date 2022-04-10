@@ -1,9 +1,12 @@
 [submodule "DSM"]
 	path = DSM
 	url = https://github.com/ElGarash/DSM
+	branch = descriptors
 [submodule "Siam-FCANet"]
 	path = Siam-FCANet
 	url = https://github.com/ElGarash/Siam-FCANet
+	branch = descriptors
 [submodule "L2LTR"]
 	path = L2LTR
 	url = https://github.com/ElGarash/L2LTR
+	branch = descriptors
