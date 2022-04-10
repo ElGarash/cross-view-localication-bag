@@ -5,14 +5,14 @@ import zipfile
 import gdown
 
 
-MODLES_DIR = "/kaggle/working/models"
-DSM_DIR = f"{MODLES_DIR}/DSM"
-L2LTR_DIR = f"{MODLES_DIR}/L2LTR"
-SiamFCANet_DIR = f"{MODLES_DIR}/Siam-FCANet"
+MODELS_DIR = "/kaggle/working/models"
+DSM_DIR = f"{MODELS_DIR}/DSM"
+L2LTR_DIR = f"{MODELS_DIR}/L2LTR"
+SiamFCANet_DIR = f"{MODELS_DIR}/Siam-FCANet"
 
 
 def create_models_dirs():
-    os.mkdir(MODLES_DIR)
+    os.mkdir(MODELS_DIR)
     os.mkdir(DSM_DIR)
     os.mkdir(SiamFCANet_DIR)
     os.mkdir(L2LTR_DIR)
