@@ -10,3 +10,7 @@
 	path = L2LTR
 	url = https://github.com/ElGarash/L2LTR
 	branch = descriptors
+[submodule "comingdowntoearth"]
+	path = comingdowntoearth
+	url = https://github.com/ElGarash/comingdowntoearth
+	branch = descriptors
