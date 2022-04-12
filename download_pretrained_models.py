@@ -11,6 +11,7 @@ DSM_DIR = f"{MODELS_DIR}/DSM"
 L2LTR_DIR = f"{MODELS_DIR}/L2LTR"
 SiamFCANet_DIR = f"{MODELS_DIR}/Siam-FCANet"
 COMING_D2E_DIR = f"{MODELS_DIR}/coming_dte"
+SAFA_DIR = f"{MODELS_DIR}/SAFA"
 
 
 def create_models_dirs():
@@ -19,6 +20,7 @@ def create_models_dirs():
     os.makedirs(SiamFCANet_DIR, exist_ok=True)
     os.makedirs(L2LTR_DIR, exist_ok=True)
     os.makedirs(COMING_D2E_DIR, exist_ok=True)
+    os.makedirs(SAFA_DIR, exist_ok=True)
 
 
 def download_dsm():
@@ -60,11 +62,20 @@ def download_coming_dte():
     with open(f'{COMING_D2E_DIR}/{MODEL_NAME}', 'wb') as f:
         f.write(response.content)
 
+
+def download_safa():
+    archive_path = "/kaggle/SAFA_Model.zip"
+    gdown.download(id="1dH44xSMXCekih8-8CK1_x-76vrMj4whr", output=archive_path)
+
+    with zipfile.ZipFile(archive_path, "r") as f:
+        f.extractall(SAFA_DIR)
+
+    os.remove(archive_path)
         
 def download_models():
     create_models_dirs()
 
-    download_commands = (download_dsm, download_siam_fca_net, download_l2ltr, download_coming_dte)
+    download_commands = (download_dsm, download_siam_fca_net, download_l2ltr, download_coming_dte, download_safa)
     download_processes = []
 
     for command in download_commands:
