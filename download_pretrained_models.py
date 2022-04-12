@@ -1,6 +1,7 @@
 from multiprocessing import Process
 import os
 import zipfile
+import requests
 
 import gdown
 
@@ -9,6 +10,7 @@ MODELS_DIR = "/kaggle/working/models"
 DSM_DIR = f"{MODELS_DIR}/DSM"
 L2LTR_DIR = f"{MODELS_DIR}/L2LTR"
 SiamFCANet_DIR = f"{MODELS_DIR}/Siam-FCANet"
+COMING_D2E_DIR = f"{MODELS_DIR}/coming_dte"
 
 
 def create_models_dirs():
@@ -16,6 +18,7 @@ def create_models_dirs():
     os.makedirs(DSM_DIR, exist_ok=True)
     os.makedirs(SiamFCANet_DIR, exist_ok=True)
     os.makedirs(L2LTR_DIR, exist_ok=True)
+    os.makedirs(COMING_D2E_DIR, exist_ok=True)
 
 
 def download_dsm():
@@ -49,10 +52,19 @@ def download_l2ltr():
     os.remove(archive_path)
 
 
+def download_coming_dte():
+    MODEL_NAME = 'rgan_best_ckpt.pth'
+    response = requests.get("https://vision.in.tum.de/webshare/u/toker/coming_dte_ckp/cvusa/rgan_best_ckpt.pth")
+    response.raise_for_status() # ensure we notice bad responses
+
+    with open(f'{COMING_D2E_DIR}/{MODEL_NAME}', 'wb') as f:
+        f.write(response.content)
+
+        
 def download_models():
     create_models_dirs()
 
-    download_commands = (download_dsm, download_siam_fca_net, download_l2ltr)
+    download_commands = (download_dsm, download_siam_fca_net, download_l2ltr, download_coming_dte)
     download_processes = []
 
     for command in download_commands:
