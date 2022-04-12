@@ -25,11 +25,18 @@ def generate_l2ltr_descriptor():
         ["python", f"{SCRIPTS_ROOT_PATH}/L2LTR/generate_sat_descriptors.py"]
     )
 
+def generate_coming_dte_descriptor():
+    print('Generating Coming-D2E descriptors...')
+    return subprocess.check_call(
+        ["python", f"{SCRIPTS_ROOT_PATH}/comingdowntoearth/generate_descriptors.py"]
+    )
+
 
 def generate_descriptors():
     p1 = generate_dsm_descriptors()
     p2 = generate_siam_fca_net_descriptor()
     p3 = generate_l2ltr_descriptor()
+    p4 = generate_coming_dte_descriptor()
 
 
 if __name__ == "__main__":
