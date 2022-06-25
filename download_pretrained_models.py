@@ -57,7 +57,7 @@ def download_l2ltr():
 def download_coming_dte():
     MODEL_NAME = "rgan_best_ckpt.pth"
     response = requests.get(
-        "https://vision.in.tum.de/webshare/u/toker/coming_dte_ckp/cvusa/rgan_best_ckpt.pth"
+        "https://vision.in.tum.de/webshare/u/toker/coming_dte_ckp/cvact/rgan_best_ckpt.pth"
     )
     response.raise_for_status()  # ensure we notice bad responses
 
