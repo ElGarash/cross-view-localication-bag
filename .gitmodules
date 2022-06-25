@@ -1,20 +1,20 @@
 [submodule "DSM"]
 	path = DSM
 	url = https://github.com/ElGarash/DSM
-	branch = descriptors
+	branch = cvact-descriptors
 [submodule "Siam-FCANet"]
 	path = Siam-FCANet
 	url = https://github.com/ElGarash/Siam-FCANet
-	branch = descriptors
+	branch = cvact-descriptors
 [submodule "L2LTR"]
 	path = L2LTR
 	url = https://github.com/ElGarash/L2LTR
-	branch = descriptors
+	branch = cvact-descriptors
 [submodule "comingdowntoearth"]
 	path = comingdowntoearth
 	url = https://github.com/ElGarash/comingdowntoearth
-	branch = descriptors
+	branch = cvact-descriptors
 [submodule "SAFA"]
 	path = SAFA
 	url = https://github.com/ElGarash/SAFA
-	branch = descriptors
+	branch = cvact-descriptors
