@@ -11,18 +11,10 @@ def generate_dsm_descriptors():
         ["python", f"{SCRIPTS_ROOT_PATH}/DSM/script/generate_descriptors.py"]
     )
 
-
-def generate_siam_fca_net_descriptor():
-    print("Generating Siam-FCANet descriptors...")
-    return subprocess.check_call(
-        ["python", f"{SCRIPTS_ROOT_PATH}/Siam-FCANet/generate_sat_descriptors.py"]
-    )
-
-
 def generate_l2ltr_descriptor():
     print("Generating L2LTR descriptors...")
     return subprocess.check_call(
-        ["python", f"{SCRIPTS_ROOT_PATH}/L2LTR/generate_sat_descriptors.py"]
+        ["python", f"{SCRIPTS_ROOT_PATH}/L2LTR/generate_descriptors.py"]
     )
 
 
@@ -42,7 +34,6 @@ def generate_safa_descriptor():
 
 def generate_descriptors():
     p1 = generate_dsm_descriptors()
-    p2 = generate_siam_fca_net_descriptor()
     p3 = generate_l2ltr_descriptor()
     p4 = generate_coming_dte_descriptor()
     p5 = generate_safa_descriptor()

@@ -9,7 +9,6 @@ import gdown
 MODELS_DIR = "/kaggle/working/models"
 DSM_DIR = f"{MODELS_DIR}/DSM"
 L2LTR_DIR = f"{MODELS_DIR}/L2LTR"
-SiamFCANet_DIR = f"{MODELS_DIR}/Siam-FCANet"
 COMING_D2E_DIR = f"{MODELS_DIR}/coming_dte"
 SAFA_DIR = f"{MODELS_DIR}/SAFA"
 
@@ -17,7 +16,6 @@ SAFA_DIR = f"{MODELS_DIR}/SAFA"
 def create_models_dirs():
     os.makedirs(MODELS_DIR, exist_ok=True)
     os.makedirs(DSM_DIR, exist_ok=True)
-    os.makedirs(SiamFCANet_DIR, exist_ok=True)
     os.makedirs(L2LTR_DIR, exist_ok=True)
     os.makedirs(COMING_D2E_DIR, exist_ok=True)
     os.makedirs(SAFA_DIR, exist_ok=True)
@@ -31,17 +29,6 @@ def download_dsm():
         f.extractall(DSM_DIR)
 
     os.remove(archive_path)
-
-
-def download_siam_fca_net():
-    gdown.download(
-        id="11D3xEgwcnx3pe6Ipy2SAwZ1Vu4tv67LY",
-        output=f"{SiamFCANet_DIR}/SFCANet_18.pth",
-    )
-    gdown.download(
-        id="1qC39of4UMexg6WxfV2aQLg44avwDrvqx",
-        output=f"{SiamFCANet_DIR}/SFCANet_18_VH.pth",
-    )
 
 
 def download_l2ltr():
@@ -80,7 +67,6 @@ def download_models():
 
     download_commands = (
         download_dsm,
-        download_siam_fca_net,
         download_l2ltr,
         download_coming_dte,
         download_safa,
