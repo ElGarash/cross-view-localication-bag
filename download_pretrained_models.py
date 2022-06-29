@@ -27,6 +27,7 @@ def download_dsm():
 
     with zipfile.ZipFile(archive_path, "r") as f:
         f.extractall(DSM_DIR)
+    print("DSM Model Successfully Downloaded")
 
     os.remove(archive_path)
 
@@ -37,7 +38,7 @@ def download_l2ltr():
 
     with zipfile.ZipFile(archive_path, "r") as f:
         f.extractall(L2LTR_DIR)
-
+    print("L2LTR Model Successfully Downloaded")
     os.remove(archive_path)
 
 
@@ -51,6 +52,9 @@ def download_coming_dte():
     with open(f"{COMING_D2E_DIR}/{MODEL_NAME}", "wb") as f:
         f.write(response.content)
 
+    print("Toker Model Successfully Downloaded")
+    
+
 
 def download_safa():
     archive_path = "/kaggle/SAFA_Model.zip"
@@ -59,7 +63,9 @@ def download_safa():
     with zipfile.ZipFile(archive_path, "r") as f:
         f.extractall(SAFA_DIR)
 
+    print("SAFA Model Successfully Downloaded")
     os.remove(archive_path)
+
 
 
 def download_models():
