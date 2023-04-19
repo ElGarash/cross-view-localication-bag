@@ -1,1 +1,1 @@
-# cross-view-localization-bag
+# cross-view-localization-ensemble
